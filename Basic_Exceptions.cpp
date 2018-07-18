@@ -13,6 +13,15 @@ void mightGoWrong()
 
 int main()
 {
-    mightGoWrong();
+    try
+    {
+        mightGoWrong();
+    }
+    catch(int e)
+    {
+        cout << "error code: "<< e << endl;
+    }
+
+    cout << "still running" << endl;
     return 0;
 }
