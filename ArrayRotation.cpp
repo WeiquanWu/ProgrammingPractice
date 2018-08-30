@@ -1,13 +1,26 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+void leftRotateByOne(vector<int>&a)
+{
+    int temp = a[0];
+    int i = 0;
+    for(i = 0; i < a.size() -1; i++)
+    {
+        a[i] = a[i+1];
+    }
+    a[i] = temp;
+}
 
 vector<string> split_string(string);
 
 // Complete the rotLeft function below.
 vector<int> rotLeft(vector<int> a, int d) {
+//Method 1: use a temp variable
+   for (int i = 0; i < d; i++)
+    leftRotateByOne(a);
 
-
+return a;
 }
 
 int main()
