@@ -15,12 +15,25 @@ void leftRotateByOne(vector<int>&a)
 vector<string> split_string(string);
 
 // Complete the rotLeft function below.
-vector<int> rotLeft(vector<int> a, int d) {
+vector<int> rotLeft(vector<int> a, int k) {
 //Method 1: use a temp variable
-   for (int i = 0; i < d; i++)
-    leftRotateByOne(a);
+    //if(d>1 && a.size()>0)
+   // {
+     //   for (int i = 0; i < d; i++)
+    //    leftRotateByOne(a);
+   // }
+//return a;
+    
+    //method 2: use mathematics
+int n = a.size();
+      vector<int> returnVect(n);
+    k%= n;
+    //vector<int> a(n);
+    for(int i = 0; i < n; i++) {
 
-return a;
+        returnVect[(n+i-k)%n] = a[i];
+    }
+    return returnVect;
 }
 
 int main()
