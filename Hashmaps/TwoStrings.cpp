@@ -18,18 +18,18 @@ using namespace std;
 
 // Complete the twoStrings function below.
 string twoStrings(string s1, string s2) {
-unordered_map<char,int> characterMap;
- /* for (int i = 0; i < n; i++) {
-    int count = 0;
 
-    for (auto c : a) {
-        if (b.find(c) != string::npos) {
-            count++;
+ /* 
+       string flag = "NO";
+    for (char c: "abcdefghijklmnopqrstuvwxyz") {
+        if(s1.find(c)!=string::npos && s2.find(c)!=string::npos){
+            flag = "YES";
             break;
         }
     }
-    (count > 0) ? cout << "YES" << endl : cout << "NO" << endl;
+    return flag;
     */
+   unordered_map<char,int> characterMap;
     int count = 0;
     for(char c : s1)
   {
