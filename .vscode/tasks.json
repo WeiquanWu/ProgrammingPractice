@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "Basic_Exceptions.cpp"
+                "-g", "Arrays\\NewYearChaos.cpp"
             ],
             "group": {
                 "kind": "build",

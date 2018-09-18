@@ -13,6 +13,7 @@ int alternatingCharacters(string s) {
             deletionsCount++;
         }
     }
+    cout<<"hello"<<endl;
     return deletionsCount;
 }
 
