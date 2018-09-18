@@ -1,3 +1,17 @@
+/*
+You are given a string containing characters  and  only. Your task is to change it into a string such that there are no matching adjacent characters. To do this, you are allowed to delete zero or more characters in the string.
+
+Your task is to find the minimum number of required deletions.
+
+Sample Input:
+5
+AAAA
+BBBBB
+ABABABAB
+BABABA
+AAABBB
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,7 +27,7 @@ int alternatingCharacters(string s) {
             deletionsCount++;
         }
     }
-    cout<<"hello"<<endl;
+    //cout<<"hello"<<endl;
     return deletionsCount;
 }
 

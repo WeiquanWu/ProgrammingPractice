@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "Arrays\\NewYearChaos.cpp"
+                "-g", "Strings\\AlternatingCharacters.cpp"
             ],
             "group": {
                 "kind": "build",
