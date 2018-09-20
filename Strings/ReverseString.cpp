@@ -17,13 +17,13 @@ class Solution {
 public:
     string reverseString(string s) {
         int n = s.size();
-        string temp = s;
+        string temp;
         if(n == 0 )
             return s;
         for(int i = n-1; i >= 0 ; i--)
         {
             cout<<s[i]<<endl;
-            temp.append(s[i]);
+            temp+=s[i];
         }
         return temp;
     }
