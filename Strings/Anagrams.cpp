@@ -26,6 +26,47 @@ int delCount = 0;
 return delCount;
 }
 
+
+bool isAnagram(string s, string t)
+{
+/*Compare string lengths
+Instantiate a count map, std::unordered_map<char, unsigned int> m
+Loop over s1, incrementing the count for each char.
+Loop over s2, decrementing the count for each char, then check that the count is 0
+*/
+        if(s.size() != t.size())
+            return false;
+        
+        unordered_map<char, unsigned int> charMap;
+        for(auto c : s){
+            //cout<<"adding" <<c<<endl;
+            charMap[c] ++;
+        }
+        
+        for(auto c : t){
+            if(charMap.find(c)!= charMap.end()){
+                 charMap[c] --;  
+            }
+            else{
+                cout<<"boo"<<endl;
+                return false;
+            }
+        }
+        
+        if(charMap.empty())
+            return true;
+        
+       // std::cout << "mymap's buckets contain:\n";
+ // for ( unsigned i = 0; i < charMap.bucket_count(); ++i) {
+   // std::cout << "bucket #" << i << " contains:";
+    for ( auto local_it = charMap.begin(); local_it!= charMap.end(); ++local_it ){
+        if(local_it->second!=0)
+            return false;
+      //std::cout << " " << local_it->first << ":" << local_it->second;
+    }
+   // std::cout << std::endl;}
+        return true;
+}
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
